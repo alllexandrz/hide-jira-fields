@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.netcracker.plugins</groupId>
     <artifactId>hide-fields-for-groups</artifactId>
-    <version>1.2.5</version>
+    <version>1.2.6</version>
     <organization>
         <name>AdOn</name>
         <url>http://adonjira.com/</url>
@@ -136,8 +136,8 @@
         </plugins>
     </build>
     <properties>
-        <jira.version>6.4.5</jira.version>
-        <amps.version>6.2.6</amps.version>
+        <jira.version>7.6.1</jira.version>
+        <amps.version>6.3.6</amps.version>
         <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
         <ao.version>1.2.3</ao.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

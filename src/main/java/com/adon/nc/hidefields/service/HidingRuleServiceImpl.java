@@ -125,8 +125,8 @@ public class HidingRuleServiceImpl implements HidingRuleService {
             .alias(HidingGroup.class, "groups")
             .alias(HidingRule.class, "rules")
             .join(HidingGroup.class, "rules.ID = groups.RULE_ID");
-        String whereClause = "( groups.TITLE IN ('" + groupStr + "') AND rules.inverse = 0) " +
-                " OR ( groups.TITLE NOT IN ('" + groupStr + "') AND rules.inverse = 1) ";
+        String whereClause = "( groups.TITLE IN ('" + groupStr + "') AND rules.\"INVERSE\" = false) " +
+                " OR ( groups.TITLE NOT IN ('" + groupStr + "') AND rules.\"INVERSE\" = true) ";
         query.setWhereClause(whereClause);
         HidingRule[] hideList = ao.find(HidingRule.class, query.distinct());
         log.debug(hideList.length + " hiding Rules founded.");
